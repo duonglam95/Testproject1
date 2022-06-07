@@ -19,14 +19,16 @@ pipeline {
         }
       }
 
-//       stage ('clone'){
-//           steps {
-//             // This step should not normally be used in your script. Consult the inline help for details.
-//             withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
-//                 // some block
-//             }
-//           }
-//         }
+      stage ('clone'){
+          steps {
+            // This step should not normally be used in your script. Consult the inline help for details.
+            withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
+                // some block
+                sh 'docker build -t acw/testproject:v10'
+                sh 'docker push -t acw/testproject:v10'
+            }
+          }
+        }
   }
     
     
