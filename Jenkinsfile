@@ -24,8 +24,8 @@ pipeline {
             // This step should not normally be used in your script. Consult the inline help for details.
             withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
                 // some block
-                sh 'docker build -t acw/testproject:v10'
-                sh 'docker push -t acw/testproject:v10'
+                sh 'docker build -t duonglam95/Testproject1:v1'
+                sh 'docker push -t duonglam95/Testproject1:v1'
             }
           }
         }
