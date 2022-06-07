@@ -14,7 +14,7 @@ pipeline {
   }
   state ('deploy'){
     steps {
-      echo 'first...'
+      echo 'first 2...'
     }
   }
     
